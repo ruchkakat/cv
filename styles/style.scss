@@ -1,0 +1,266 @@
+@import 'mixins';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.photo {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    width: 50%;
+    &_section {
+        width: 100%;
+        min-height: 970px;
+        background: #93a9b8;
+        padding: 250px 0;
+        img {
+            width: 350px;
+            max-width: 350px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+.header {
+    padding: 30px 70px;
+    &_wrapper {
+        width: 50%;
+        position: relative;
+    }
+    &_title {
+        position: absolute;
+        z-index: 2;
+        font-weight: 700;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 19px;
+        line-height: 23px;
+        color: #000;
+        text-transform: uppercase;
+    }
+    &_nav {
+        position: absolute;
+        left: 65%;
+        z-index: 2;
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            &_item {
+                padding-right: 40px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 15px;
+                line-height: 19px;
+                color: #000;
+                a {
+                    @include link;
+                }
+                a:hover {
+                    @include hover;
+                }
+            }
+        }
+    }
+    &_button {
+        position: fixed;
+        left: 88%;
+        z-index: 2;
+        button {
+            width: 160px;
+            height: 40px;
+            background: #000;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            line-height: 19px;
+            color: #fff;
+        }
+        button:hover {
+            background: #fff;
+            color: #000;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+    }
+}
+
+.hamburger {
+    display: none;
+  }
+
+.main_wrapper {
+    width: 50%;
+}
+
+.container {
+    width: 530px;
+    margin: 0 auto;
+    padding: 200px 0 30px;
+}
+
+.main {
+    padding: $section-padding;
+    h1 {
+        font-weight: 700;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 70px;
+        line-height: 75px;
+        color: #000;
+    }
+    h2 {
+        padding: 0 0 50px;
+        font-weight: 400;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 28px;
+        line-height: 38px;
+        color: #000;
+    }
+    &_text {
+        padding: 0 0 15px;
+        @include text;
+        a {
+            @include link;
+        }
+        a:hover {
+            @include hover;
+        }
+    }
+    &_links {
+        padding: 0 0 70px;
+        @include text;
+        a {
+            color: #000;         
+            text-decoration: underline;
+        }
+        a:hover {
+            @include hover;
+        }
+    }
+    &_pointer {
+        @include text;
+        a {
+            @include link;
+        }
+        a:hover {
+            @include hover;
+        }
+    }
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.about {
+    padding: $section-padding;
+    h3 {
+        @include title;
+    }
+    h3::after {
+        @include line;
+        width: 348px;
+    }
+    &_text {
+        @include text;
+    }
+}
+
+.skills {
+    padding: $section-padding;
+    h3 {
+        @include title;
+    }
+    h3::after {
+        @include line;
+        width: 400px;
+    }
+    &_text {
+        @include text;
+    }
+}
+
+.languages {
+    padding: $section-padding;
+    h3 {
+        @include title;
+    }
+    h3::after {
+        @include line;
+        width: 325px;
+    }
+    &_text {
+        @include text;
+    }
+}
+
+.experience {
+    padding: $section-padding;
+    h3 {
+        @include title;
+    }
+    h3::after {
+        @include line;
+        width: 320px;
+    }
+    &_text {
+        @include text;
+    }
+}
+
+.education {
+    padding: $section-padding;
+    h3 {
+        @include title;
+    }
+    h3::after {
+        @include line;
+        width: 320px;
+    }
+    &_text {
+        @include text;
+    }
+}
+
+.contacts {
+    padding: $section-padding;
+    h3 {
+        @include title;
+    }
+    h3::after {
+        @include line;
+        width: 340px;
+    }
+    &_text {
+        @include text;
+        padding:0 0 15px;
+        a {
+            @include link;
+        }
+        a:hover {
+            @include hover;
+        }
+    }
+    &_links {
+        @include text;
+        a {
+            color: #000;         
+            text-decoration: underline;
+        }
+        a:hover {
+            @include hover;
+        }
+    }
+}
+
+footer {
+    @include text;
+}
+
+@import 'media';

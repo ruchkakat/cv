@@ -1,0 +1,38 @@
+@mixin link {
+    color: #000;
+    text-decoration: none;
+}
+
+@mixin hover {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+@mixin text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    color: #000;
+}
+
+@mixin title {
+    padding: 0 0 40px;
+    font-weight: 700;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 28px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+@mixin line {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 5px 30px;
+    height: 1px ;
+    background-color: #000;
+}
+
+$section-padding: 0 0 450px;
