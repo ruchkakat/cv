@@ -77,14 +77,20 @@
             height: 40px;
             background: #000;
             border: none;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 15px;
-            line-height: 19px;
-            color: #fff;
+            a {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 15px;
+                line-height: 19px;
+                color: #fff;
+                text-decoration: none;
+            }
+            a:hover {
+                color: #000;
+                transition: all 0.5s ease;
+            }
         }
         button:hover {
-            background: #fff;
-            color: #000;
+            background: #fff;     
             transition: all 0.5s ease;
             cursor: pointer;
         }
